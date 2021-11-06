@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crud Express Server</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <h2>Show All users</h2>
+      <button id="getusers">Show All users</button>
+      <!-- add table to display all users -->
+
+      <h2>Show Specific User by inserting the Id number</h2>
+      <h3>Insert Id</h3> <input type="number" id="get_user"/>
+      <button id="getuser-id">Get Specific User</button>
+      <!-- add table to display a single User -->
+
+      <h2>Create User</h2>
+      <h3>Insert name</h3> <input type="text" id="crN"/>
+      <h3>Insert Email</h3> <input type="email" id="crE"/>
+      <h3>Insert Address</h3> <input type="text" id="crA"/>
+      <button id="postuser">Create a User</button>
+
+      <h2>Edit a User by Id</h2>
+      <h3>Insert Id</h3> <input type="number" id="Edid"/>
+      <h3>Insert Name</h3> <input type="text" id="Edna"/>
+      <h3>Insert Email</h3> <input type="email" id="Edem"/>
+      <h3>Insert Address</h3> <input type="text" id="EdAddr"/>
+      <button id="putuser-id">Modify a User</button>
+
+      <h2>Delete a User by Id</h2>
+      <h3>Insert Id</h3> <input type="number" id="delid">
+      <button id="deluser-id">Delete User</button>
+
+      <h2>Delete All Users</h2>
+      <button id="delallusers">Delete Users</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
