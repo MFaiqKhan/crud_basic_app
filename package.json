@@ -1,14 +1,14 @@
 {
   "name": "crud_express_application",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Curd basic",
+  "main": "server.mjs",
   "scripts": {
     "start": "node server.mjs",
     "dev": "nodemon server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Muhammad Faiq Khan",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
@@ -19,3 +19,5 @@
     "nodemon": "^2.0.14"
   }
 }
+
+

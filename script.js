@@ -103,7 +103,8 @@ BtnEdit.addEventListener("click", () => {
       address: editAddr,
     })
     .then((response) => {
-      console.log(response);
+      alert('User Updated Successfully')
+      console.log(response.data + response.status);
     })
     .catch((error) => {
       console.log(error);
@@ -112,13 +113,10 @@ BtnEdit.addEventListener("click", () => {
 BtnDel.addEventListener("click", () => {
   const DeleID = document.getElementById("delid").value;
   axios
-    .delete(`https://crud-basic-server.herokuapp.com/user${DeleID}`, {
-      name: {},
-      email: {},
-      address: {},
-    })
+    .delete(`https://crud-basic-server.herokuapp.com/user/${DeleID}`)
     .then((response) => {
-      console.log(response.data);
+      alert("User Deleted Succesfully")
+      console.log(response.data +" "+ response.status);
     })
     .catch((error) => {
       console.log(error);
@@ -128,9 +126,13 @@ BtnDelAll.addEventListener("click", () => {
   axios
     .delete("https://crud-basic-server.herokuapp.com/userdelall")
     .then((response) => {
-      console.log(response.data);
+      alert("All User Deleted Successfully")
+      console.log(response.data +" "+ response.status);
     })
     .catch((error) => {
       console.log(error);
     });
 });
+
+
+
