@@ -82,7 +82,7 @@ app.delete('/user/:id', (req,res) => {
 
 app.delete('/userdelall', (req,res) => {
     if (users) {
-        users = {}
+        users = []
         res.send('All user deleted')
     } else {
         res.status(404).send('users doesn"t exists');
