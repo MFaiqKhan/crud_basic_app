@@ -8,7 +8,7 @@ const BtnDelAll = document.getElementById("delallusers");
 BtnAllusers.addEventListener("click", () => {
   document.getElementById("tbod").textContent = ""
   axios
-    .get("http://localhost:3000/users")
+    .get("https://crud-basic-server.herokuapp.com/users")
     .then((response) => {
       dataUsers = response.data;
       //console.log(dataUsers);
@@ -43,12 +43,13 @@ Btncreate.addEventListener("click", () => {
   let inpName = document.getElementById("crN").value;
   let inpEmail = document.getElementById("crE").value;
   let inpAddr = document.getElementById("crA").value;
+  const URL = "https://crud-basic-server.herokuapp.com/user";
   if (!inpName || !inpEmail || !inpAddr) {
     //if(inpName === ""||inpEmail === "" || inpAddr ==="") {}
     alert("Input All Fields");
   }
   axios
-    .post("http://localhost:3000/user", {
+    .post(URL, {
       name: inpName,
       email: inpEmail,
       address: inpAddr,
@@ -67,7 +68,7 @@ Btnuser.addEventListener("click", () => {
   let InpgetUser = document.getElementById("get_user").value;
   document.getElementById("tbod").textContent = ""
   axios
-    .get(`http://localhost:3000/user/${InpgetUser}`)
+    .get(`https://crud-basic-server.herokuapp.com/user/${InpgetUser}`)
     .then((response) => {
       //console.log(response.data);
       datauser = response.data;
@@ -96,7 +97,7 @@ BtnEdit.addEventListener("click", () => {
   let editEmai = document.getElementById("Edem").value;
   let editAddr = document.getElementById("EdAddr").value;
   axios
-    .put(`http://localhost:3000/user/${editid}`, {
+    .put(`https://crud-basic-server.herokuapp.com/user/${editid}`, {
       name: editNam,
       email: editEmai,
       address: editAddr,
@@ -111,7 +112,7 @@ BtnEdit.addEventListener("click", () => {
 BtnDel.addEventListener("click", () => {
   const DeleID = document.getElementById("delid").value;
   axios
-    .delete(`http://localhost:3000/user/${DeleID}`, {
+    .delete(`https://crud-basic-server.herokuapp.com/user${DeleID}`, {
       name: {},
       email: {},
       address: {},
@@ -125,7 +126,7 @@ BtnDel.addEventListener("click", () => {
 });
 BtnDelAll.addEventListener("click", () => {
   axios
-    .delete("http://localhost:3000/userdelall")
+    .delete("https://crud-basic-server.herokuapp.com/userdelall")
     .then((response) => {
       console.log(response.data);
     })
